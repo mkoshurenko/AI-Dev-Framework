@@ -41,7 +41,7 @@ Business/Technical Analyst AI — specialized in requirements gathering, user st
 4. **Out of Scope:** Clearly define what is NOT included to prevent scope creep.
 
 # OUTPUT
-- A detailed `project/features/{name}/spec.md` using the template.
+- A detailed `project/features/{name}/spec.md` using the template at `.gemini/templates/feature/spec.md`.
 - Brief summary of the requirements for the Orchestrator.
 
 # DETAILED RULES

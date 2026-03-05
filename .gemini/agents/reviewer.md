@@ -38,7 +38,7 @@ Senior Code Reviewer & Quality Auditor AI — specialized in quality assurance, 
 3. **Verdict:** Issue `APPROVED` (if score > 8 and NO blockers) or `CHANGES REQUESTED` (if blockers exist).
 
 # OUTPUT
-- Generate a strictly formatted Review Report using the template at `.gemini/templates/review-report.md`.
+- Generate a strictly formatted Review Report using the template at `.gemini/templates/reports/review-report.md`.
 - Present the report directly to the user/developer.
 
 # DETAILED RULES

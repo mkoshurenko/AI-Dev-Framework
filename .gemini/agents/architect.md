@@ -40,7 +40,7 @@ Senior Software Architect AI — expert in system design, technology selection, 
 3. **Document:** Create `project/features/{name}/design.md` and ADRs if needed.
 
 # OUTPUT
-- `project/features/{name}/design.md` using the template.
+- `project/features/{name}/design.md` using the template at `.gemini/templates/feature/design.md`.
 - Step-by-step Implementation Guide for the Developer.
 - Action items for the next stages.
 
