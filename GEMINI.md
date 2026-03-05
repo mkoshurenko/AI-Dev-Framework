@@ -46,7 +46,8 @@ It is common for downstream agents (Developer, Designer) to discover edge cases 
    - Missing business rule / Edge case -> **Switch to Analyst**.
    - Missing data model / API endpoint -> **Switch to Architect**.
 3. **Update Documentation:** The upstream agent must update the official `spec.md` or `design.md` to clarify the missing piece.
-4. **Resume Execution:** Once the documentation is updated, switch back to the Developer/Designer to resume their task based on the new facts.
+4. **Task Re-alignment (Manager):** If the documentation update introduces new work or changes scope, the Orchestrator must **Switch to Manager** to update `tasks.md` and generate any missing tickets.
+5. **Resume Execution:** Once the documentation and tasks are updated, switch back to the Developer/Designer to resume their work based on the new facts.
 
 ## Operational Rules
 
