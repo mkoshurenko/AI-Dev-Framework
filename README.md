@@ -34,6 +34,26 @@ A hierarchical, agent-based framework for AI-assisted software development. Opti
    }
    ```
 
+## Generated Project Structure
+
+After running the initialization script, a `project/` directory is created. This serves as the single source of truth for the Orchestrator and all agents:
+
+```text
+project/
+├── architecture/      # Global system design and ADRs
+├── context/           # Shared, frontend, and backend coding contexts
+├── decisions/         # Log of important non-technical decisions
+├── docs/              # Developer onboarding, API specs, database schemas
+├── features/          # Feature-driven documentation (where agents do most of their work)
+│   └── feature-name/
+│       ├── spec.md    # Requirements by Analyst
+│       ├── design.md  # UML/Architecture by Architect
+│       └── tasks.md   # Execution plan by Manager
+├── management/        # High-level project config
+├── temp/              # Backlog, scratchpads, and active bug reports
+└── ui/                # UI frameworks and design system cookbook
+```
+
 ## How to Use This Framework (Best Practices)
 
 To get the maximum performance and value out of this framework, follow these interaction guidelines when chatting with Gemini CLI:
