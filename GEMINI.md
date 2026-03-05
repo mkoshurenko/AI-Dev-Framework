@@ -37,6 +37,10 @@ For every feature or bug fix, follow this sequence:
 - **Validation:** After each task or logical block, call `reviewer` agent to review the code and tests.
 - **Loop:** Iterate until **APPROVED**.
 
+### 6. Operations & CI/CD (DevOps)
+- **Action:** Call `devops` agent to run local checks (linters, test suites) or to configure deployment pipelines (CI/CD, Docker).
+- **Validation:** The `devops` agent provides a report of the test/lint results. Ensure all automated quality gates pass before concluding the feature lifecycle.
+
 ## Handling Missing Requirements (Backwards Delegation)
 It is common for downstream agents (Developer, Designer) to discover edge cases or missing requirements that the upstream agents (Analyst, Architect) missed. 
 

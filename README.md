@@ -5,7 +5,7 @@ A hierarchical, agent-based framework for AI-assisted software development. Opti
 ## Core Architecture
 
 - **Orchestrator (`GEMINI.md`)**: The "Brain" that manages the lifecycle and delegates tasks.
-- **Agents (`.gemini/agents/`)**: Specialized sub-agents (Analyst, Architect, Manager, Designer, Developer, Reviewer).
+- **Agents (`.gemini/agents/`)**: Specialized sub-agents (Analyst, Architect, Manager, Designer, Developer, Reviewer, DevOps).
 - **Global Skills (`.gemini/skills/methodology/`)**: Shared framework knowledge and universal architectural conventions (UML, Interview Techniques, Quality Gates, Clean Architecture).
 - **Project Skills (`.gemini/skills/project/`)**: Custom rules and guidelines specific to your current project.
 - **Templates (`.gemini/templates/`)**: Standardized formats for specs, designs, tasks, and Code Review Reports.
@@ -83,6 +83,7 @@ The framework includes predefined Markdown templates to ensure consistency acros
 3. **UI/UX**: `Designer` creates `ui-design.md` (if needed) ↔ `Reviewer` validates.
 4. **Planning**: `Manager` creates `tasks.md` ↔ `Reviewer` validates.
 5. **Execution**: `Developer` implements tasks ↔ `Reviewer` audits code and provides a graded Review Report.
+6. **Operations**: `DevOps` runs automated quality gates (linters, tests) and manages CI/CD configurations.
 
 ## Key Principles
 
