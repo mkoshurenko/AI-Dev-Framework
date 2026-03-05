@@ -10,30 +10,31 @@ Documentation in this framework is intended to be both developer-friendly and cl
 ## 1. Mandatory Mermaid.js Diagrams
 Use `mermaid` code blocks to generate diagrams that can be easily rendered by GitHub, GitLab, and modern Markdown viewers.
 
+**CRITICAL LAYOUT RULE:** Always configure Flowcharts and State Diagrams to render Left-to-Right (horizontal) instead of Top-to-Bottom (vertical). This makes them significantly easier to read on standard screens. Use `graph LR` or `direction LR`.
+
 ### For the Analyst (`spec.md` & User Flows):
-Instead of just listing steps, visualize the "Happy Path" and "Edge Cases" using State or Sequence diagrams.
-*Example - User Login Flow:*
+Instead of just listing steps, visualize the "User Journey" and "Edge Cases" using horizontal State Diagrams or Flowcharts.
+*Example - User Journey (Horizontal):*
 ```mermaid
-sequenceDiagram
-    actor User
-    participant Client as Mobile App
-    participant Server as Auth API
-    User->>Client: Enters Credentials
-    Client->>Server: POST /login
-    alt Valid Credentials
-        Server-->>Client: 200 OK (JWT Token)
-        Client-->>User: Navigate to Dashboard
-    else Invalid Credentials
-        Server-->>Client: 401 Unauthorized
-        Client-->>User: Show Error Message
-    end
+stateDiagram-v2
+    direction LR
+    [*] --> LoginScreen : Opens App
+    
+    state LoginScreen {
+        [*] --> Idle
+        Idle --> Validating : Enters Data
+    }
+    
+    Validating --> Dashboard : Success
+    Validating --> LoginScreen : Error
+    Dashboard --> [*]
 ```
 
 ### For the Architect (`design.md` & Architecture):
-You MUST include a component or system architecture diagram.
-*Example - System Architecture:*
+You MUST include a component or system architecture diagram, rendering Left-to-Right.
+*Example - System Architecture (Horizontal):*
 ```mermaid
-graph TD
+graph LR
     UI[Mobile UI] -->|User Intent| VM[ViewModel]
     VM -->|Fetch Data| Repo[Repository]
     Repo -->|API Call| Net[Network DataSource]
