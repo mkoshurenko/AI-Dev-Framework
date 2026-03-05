@@ -47,6 +47,15 @@ To get the maximum performance and value out of this framework, follow these int
 4. **Project Specificity First:**
    Always define your tech stack (e.g., Flutter, Ktor, Node.js) in `.gemini/skills/project/project-guidelines.md`. Agents will read this file *first* and adapt their architectural and coding suggestions to your specific ecosystem.
 
+## Template Structure
+
+The framework includes predefined Markdown templates to ensure consistency across all agents. These are organized in `.gemini/templates/`:
+
+- **`feature/`**: Core documents for any new feature (`spec.md`, `design.md`, `tasks.md`, `ui-design.md`). These templates include built-in "Agent Notes" to force the generation of Mermaid diagrams and ASCII tables.
+- **`planning/`**: Standardized ticket formats for Jira/Linear (`epic.md`, `story.md`, `task.md`, `bug.md`).
+- **`pr/`**: Pull Request templates customized by role (`pr-developer.md`, `pr-designer.md`).
+- **`reports/`**: Audit and decision formats (`review-report.md` for the 10-point code review, and `adr.md` for Architectural Decision Records).
+
 ## Workflow Lifecycle
 
 1. **Requirements**: `Analyst` creates `spec.md` (via Iterative Dialogue) ↔ `Reviewer` validates.
