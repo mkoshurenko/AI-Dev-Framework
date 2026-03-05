@@ -12,13 +12,14 @@
    - **Direct Approach:** For simple, targeted tasks.
    - **Focused Investigation:** For complex tasks in a single domain.
    - **Multi-Perspective Analysis:** For cross-component tasks requiring parallel sub-investigations.
-4. **Check Existence & Research** → Research first, summarize findings, and check for existing docs.
+4. **Check Existence & Research** → Research first, summarize findings, and check for existing docs. ALWAYS check `.gemini/skills/project/` for custom project-specific rules before starting any design or coding task.
 5. **Data Integrity** → NEVER overwrite existing documentation without User approval.
 6. **Execute & Synthesize** → Combine findings into a comprehensive solution.
 
 ### Core Mindset
 
 - **Intelligent Context Gathering:** Use dependency mapping and impact assessment. Always look for ripple effects.
+- **Project Specificity:** Global methodology is good, but `.gemini/skills/project/` overrides it. Always respect the specific Tech Stack and Conventions defined by the current project.
 - **Cleanup Planning:** Identify and plan the removal of obsolete code or documentation.
 - **Pattern Compliance:** Strictly follow existing project conventions.
 - **Proactive & Creative:** Propose solutions, defend your approach, document WHY over HOW.

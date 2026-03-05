@@ -6,7 +6,8 @@ A hierarchical agent-based framework for AI-assisted software development. Optim
 
 - **Orchestrator (`GEMINI.md`)**: The "Brain" that manages the lifecycle and delegates tasks.
 - **Agents (`.gemini/agents/`)**: Specialized sub-agents (Analyst, Architect, Manager, Designer, Developer, Reviewer).
-- **Skills (`.gemini/skills/`)**: Shared knowledge and project conventions.
+- **Global Skills (`.gemini/skills/methodology/`)**: Shared framework knowledge and universal architectural conventions.
+- **Project Skills (`.gemini/skills/project/`)**: Custom rules and guidelines specific to your current project.
 - **Templates (`.gemini/templates/`)**: Standardized formats for specs, designs, and tasks.
 
 ## Setup in a New Project
@@ -15,12 +16,15 @@ A hierarchical agent-based framework for AI-assisted software development. Optim
    Copy `.gemini/` and `GEMINI.md` to your new project root.
 
 2. **Initialize Project Structure**:
-   Run the initialization script to create the necessary `project/` documentation folders:
+   Run the initialization script to create the necessary `project/` documentation folders and project skill templates:
    ```bash
    bash .gemini/scripts/init-project.sh
    ```
 
-3. **Configure Gemini CLI**:
+3. **Define Project Skills**:
+   Open `.gemini/skills/project/project-guidelines-template.md`, fill in your specific tech stack and conventions, and rename it to `project-guidelines.md`.
+
+4. **Configure Gemini CLI**:
    Ensure your `~/.gemini/settings.json` has agents enabled:
    ```json
    {
