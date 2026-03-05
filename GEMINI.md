@@ -37,6 +37,17 @@ For every feature or bug fix, follow this sequence:
 - **Validation:** After each task or logical block, call `reviewer` agent to review the code and tests.
 - **Loop:** Iterate until **APPROVED**.
 
+## Handling Missing Requirements (Backwards Delegation)
+It is common for downstream agents (Developer, Designer) to discover edge cases or missing requirements that the upstream agents (Analyst, Architect) missed. 
+
+**When this happens, the Orchestrator MUST follow the Backwards Delegation process:**
+1. **Pause Execution:** The Developer or Designer must immediately pause their current task. Do NOT guess or invent business logic.
+2. **Switch Role (Escalate):** The Orchestrator must switch back to the appropriate upstream agent:
+   - Missing business rule / Edge case -> **Switch to Analyst**.
+   - Missing data model / API endpoint -> **Switch to Architect**.
+3. **Update Documentation:** The upstream agent must update the official `spec.md` or `design.md` to clarify the missing piece.
+4. **Resume Execution:** Once the documentation is updated, switch back to the Developer/Designer to resume their task based on the new facts.
+
 ## Operational Rules
 
 - **Research First:** Before initiating work, agents MUST read and analyze all existing documentation related to the task.
