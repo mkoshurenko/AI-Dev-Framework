@@ -1,68 +1,34 @@
-# FEATURE SPEC: [Feature Name]
+# Feature Specification: {Feature Name}
 
-## Overview
+## 1. Overview
+{Brief description of the feature, its goal, and the problem it solves.}
 
-**Description:**
-**Created:** YYYY-MM-DD
-**Status:** draft | ready | in-progress | done
+## 2. User Flows (Visualized)
+> **Agent Note:** MUST use Mermaid.js `stateDiagram-v2` with `direction LR` to visualize the user's journey between screens and states.
 
-## Problem Statement
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> Screen1 : Trigger
+    Screen1 --> Screen2 : Action
+    Screen2 --> [*] : Success
+```
 
-<!-- What problem does this feature solve? Why do we need it? -->
+## 3. Data & Security Rules
+> **Agent Note:** Use an ASCII table to represent key data requirements, validation rules, or permissions.
 
-## User Stories
+| Rule | Parameter | Description |
+| :--- | :--- | :--- |
+| Example Rule | Value | Description of the rule |
 
-### Story 1: [Title]
+## 4. User Stories & Acceptance Criteria
 
-**As a** [user type]
-**I want to** [action]
-**So that** [benefit]
+### {Epic Name}
+* **Story:** As a {user type}, I want to {action} so that {benefit}.
+  * [ ] {Testable acceptance criterion 1}
+  * [ ] {Testable acceptance criterion 2}
 
-**Acceptance Criteria:**
-- [ ] Criteria 1
-- [ ] Criteria 2
-- [ ] Criteria 3
-
----
-
-### Story 2: [Title]
-
-**As a** [user type]
-**I want to** [action]
-**So that** [benefit]
-
-**Acceptance Criteria:**
-- [ ] Criteria 1
-- [ ] Criteria 2
-
----
-
-## Edge Cases
-
-| Scenario | Expected Behavior |
-|----------|-------------------|
-| | |
-
-## Error Handling
-
-| Error Condition | User Message | System Action |
-|-----------------|--------------|---------------|
-| | | |
-
-## Out of Scope
-
-<!-- What is explicitly NOT part of this feature -->
-
--
-
-## Questions / Assumptions
-
-| Question/Assumption | Answer/Decision |
-|---------------------|-----------------|
-| | |
-
-## References
-
-<!-- Links to designs, related features, external docs -->
-
--
+## 5. Edge Cases & Constraints
+* **Offline behavior:** {What happens without internet?}
+* **Error handling:** {What happens on API failure?}
+* **Out of Scope:** {Clearly define what is NOT being built.}
