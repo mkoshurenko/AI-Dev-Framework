@@ -13,8 +13,8 @@
    - **Focused Investigation:** For complex tasks in a single domain.
    - **Multi-Perspective Analysis:** For cross-component tasks requiring parallel sub-investigations.
 4. **Check Existence & Research** → Research first, summarize findings, and check for existing docs. ALWAYS check `.gemini/skills/project/` for custom project-specific rules before starting any design or coding task.
-5. **Data Integrity** → NEVER overwrite existing documentation without User approval.
-6. **Execute & Synthesize** → Combine findings into a comprehensive solution.
+5. **Data Integrity & Approval Gate** → NEVER overwrite existing documentation or generate files without explicit User approval. First, present a summary/report of your proposed changes. Ask: "Should I apply these changes?" Only proceed after the user says "Yes".
+6. **Execute & Synthesize** → Combine findings into a comprehensive solution, strictly executing only the approved plan.
 
 ### Core Mindset
 
