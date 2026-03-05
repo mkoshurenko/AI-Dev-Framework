@@ -10,7 +10,7 @@ Documentation in this framework is intended to be both developer-friendly and cl
 ## 1. Mandatory Mermaid.js Diagrams
 Use `mermaid` code blocks to generate diagrams that can be easily rendered by GitHub, GitLab, and modern Markdown viewers.
 
-**CRITICAL LAYOUT RULE:** Always configure Flowcharts and State Diagrams to render Left-to-Right (horizontal) instead of Top-to-Bottom (vertical). This makes them significantly easier to read on standard screens. Use `graph LR` or `direction LR`.
+**CRITICAL LAYOUT RULE:** Always configure Flowcharts and State Diagrams to render Left-to-Right (horizontal) instead of Top-to-Bottom (vertical). This makes them significantly easier to read on standard screens. Use `graph LR` or `direction LR`. *(Note: Sequence Diagrams `sequenceDiagram` inherently flow top-to-bottom to represent time and do not require this).*
 
 ### For the Analyst (`spec.md` & User Flows):
 Instead of just listing steps, visualize the "User Journey" and "Edge Cases" using horizontal State Diagrams or Flowcharts.
